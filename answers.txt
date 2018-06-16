@@ -1,0 +1,25 @@
+Q1: Which of the four transforms suggested got you the closest to satisfying the assumptions of a T-test?
+A1: Fix 2 because the transformed data are normally distributed and with equal varaince. Doing T-test on this kind of data makes perfect sense
+
+Q2: I gave imprecise English translations of what the by-week test, and the Mann-Whitney test were actually testing. Do the same for the original T-test, and for the transformed data T-test. That is, describe what the conclusion would be if you could reject the null hypothesis in those tests.
+A2: The results from U-test on original data and T-test on transformed data reflect that the comments counts on weekend and weekday are different because both tests have near-0 pvalue. We can confidently reject the null hypothesis which assumes that comments counts on weekends and weekdays are same
+
+Q3: Of the four approaches, which do you think actually does a better job of getting an answer for the original question: “are there a different number of Reddit comments posted on weekdays than on weekends?” Briefly explain why. (It's not clear to me that there is a single correct answer to this question.)
+A3: U-test seems to do a better job because of 2 reasons:
+1) it's easiest to implement (just call the library)
+2) The pvalue from this test is the lowest (pvalue=4.3122266173669665e-53). With this low value, we are super confident to reject the null hypothesis
+
+Q4: When are more Reddit comments posted in /r/canada, on average weekdays or weekends?
+A4: Through the plot, we can clearly see that weekdays got more comments
+
+
+My outputs:
+Initial (invalid) T-test p-value: 1.3e-58
+Original data normality p-values: 1.01e-07 0.00152
+Original data equal-variance p-value: 0.0438
+Transformed data normality p-values: 0.000402 0.315
+Transformed data equal-variance p-value: 0.000419
+Weekly data normality p-values: 0.308 0.153
+Weekly data equal-variance p-value: 0.204
+Weekly T-test p-value: 1.34e-34
+Mann–Whitney U-test p-value: 4.31e-53
